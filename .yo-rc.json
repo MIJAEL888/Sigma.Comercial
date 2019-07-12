@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sigma"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "microservice",
+    "baseName": "comercial",
+    "packageName": "com.sigma",
+    "packageFolder": "com/sigma",
+    "serverPort": "8083",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NzY3MzgyZTE4NzJhYjM2NzU0MDVkMmQxMmIzZTBkZjIzYzRhYTQwYzQ0ZDFkOTkwNTdlMmM5NDJlNGM5YTNiMDgzMjgxOGMzZjY5MTM2YmQ5OTJmMDhmZmU5MGExMDEyZDVkNzZjYjgxMzcyMTFiZjA4M2MzYWUxNGUzYWVkNjg=",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
