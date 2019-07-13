@@ -1,0 +1,93 @@
+{
+    "name": "Sede",
+    "fields": [
+        {
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "referencia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitud",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longitud",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "actividad",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "comentario",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "rutaDocEstudio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreDocEstudio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "documentoEstudio",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "contactoSede",
+            "otherEntityRelationshipName": "sede",
+            "relationshipName": "contactoSede"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "servicio",
+            "otherEntityRelationshipName": "sede",
+            "relationshipName": "servicio"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cliente",
+            "otherEntityRelationshipName": "sede",
+            "relationshipName": "cliente",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "distrito",
+            "otherEntityName": "distrito",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071414",
+    "entityTableName": "sede",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

@@ -1,0 +1,44 @@
+{
+    "name": "Distrito",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ubigeo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "sede",
+            "otherEntityRelationshipName": "distrito",
+            "relationshipName": "sede"
+        },
+        {
+            "relationshipName": "provincia",
+            "otherEntityName": "provincia",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071416",
+    "entityTableName": "distrito",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

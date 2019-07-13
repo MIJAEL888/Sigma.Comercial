@@ -1,0 +1,45 @@
+{
+    "name": "ContactoSede",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "correo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "posicion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "sede",
+            "otherEntityName": "sede",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071415",
+    "entityTableName": "contacto_sede",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

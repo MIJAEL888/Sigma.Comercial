@@ -41,6 +41,33 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.sigma.domain.Servicio.class.getName());
+            createCache(cm, com.sigma.domain.Servicio.class.getName() + ".monitoreoServicios");
+            createCache(cm, com.sigma.domain.MonitoreoServicio.class.getName());
+            createCache(cm, com.sigma.domain.ComponenteMonitoreo.class.getName());
+            createCache(cm, com.sigma.domain.ComponenteMonitoreo.class.getName() + ".paramentroMonitoreos");
+            createCache(cm, com.sigma.domain.ParamentroMonitoreo.class.getName());
+            createCache(cm, com.sigma.domain.ParamentroMonitoreo.class.getName() + ".monitoreoServicios");
+            createCache(cm, com.sigma.domain.TipoServicios.class.getName());
+            createCache(cm, com.sigma.domain.TipoServicios.class.getName() + ".sevicios");
+            createCache(cm, com.sigma.domain.TipoSolicitud.class.getName());
+            createCache(cm, com.sigma.domain.TipoSolicitud.class.getName() + ".sevicios");
+            createCache(cm, com.sigma.domain.TipoInduccion.class.getName());
+            createCache(cm, com.sigma.domain.TipoInduccion.class.getName() + ".sevicios");
+            createCache(cm, com.sigma.domain.RequisitosSeguridad.class.getName());
+            createCache(cm, com.sigma.domain.RequisitosSeguridad.class.getName() + ".sevicios");
+            createCache(cm, com.sigma.domain.Cliente.class.getName());
+            createCache(cm, com.sigma.domain.Cliente.class.getName() + ".sedes");
+            createCache(cm, com.sigma.domain.Sede.class.getName());
+            createCache(cm, com.sigma.domain.Sede.class.getName() + ".contactoSedes");
+            createCache(cm, com.sigma.domain.Sede.class.getName() + ".servicios");
+            createCache(cm, com.sigma.domain.ContactoSede.class.getName());
+            createCache(cm, com.sigma.domain.Distrito.class.getName());
+            createCache(cm, com.sigma.domain.Distrito.class.getName() + ".sedes");
+            createCache(cm, com.sigma.domain.Provincia.class.getName());
+            createCache(cm, com.sigma.domain.Provincia.class.getName() + ".distritos");
+            createCache(cm, com.sigma.domain.Departamento.class.getName());
+            createCache(cm, com.sigma.domain.Departamento.class.getName() + ".provincias");
             // jhipster-needle-ehcache-add-entry
         };
     }

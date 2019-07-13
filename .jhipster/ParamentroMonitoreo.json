@@ -1,0 +1,44 @@
+{
+    "name": "ParamentroMonitoreo",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "costo",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "componenteMonitoreo",
+            "otherEntityName": "componenteMonitoreo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "monitoreoServicio",
+            "otherEntityRelationshipName": "paramentroMonitoreo",
+            "relationshipName": "monitoreoServicio"
+        }
+    ],
+    "changelogDate": "20190713071408",
+    "entityTableName": "paramentro_monitoreo",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

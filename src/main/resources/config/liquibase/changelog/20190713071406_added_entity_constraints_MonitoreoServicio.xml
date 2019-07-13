@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity MonitoreoServicio.
+    -->
+    <changeSet id="20190713071406-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="servicio_id"
+                                 baseTableName="monitoreo_servicio"
+                                 constraintName="fk_monitoreo_servicio_servicio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servicio"/>
+
+        <addForeignKeyConstraint baseColumnNames="paramentro_monitoreo_id"
+                                 baseTableName="monitoreo_servicio"
+                                 constraintName="fk_monitoreo_servicio_paramentro_monitoreo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="paramentro_monitoreo"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,34 @@
+{
+    "name": "RequisitosSeguridad",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "servicio",
+            "otherEntityRelationshipName": "requisitosSeguridad",
+            "relationshipName": "sevicio"
+        }
+    ],
+    "changelogDate": "20190713071412",
+    "entityTableName": "requisitos_seguridad",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

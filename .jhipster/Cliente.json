@@ -1,0 +1,74 @@
+{
+    "name": "Cliente",
+    "fields": [
+        {
+            "fieldName": "razonSocial",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ruc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "correo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreContacto",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "actividad",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "comentario",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "fechaCreacion",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "codigoZona",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "sede",
+            "otherEntityRelationshipName": "cliente",
+            "relationshipName": "sede"
+        }
+    ],
+    "changelogDate": "20190713071413",
+    "entityTableName": "cliente",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

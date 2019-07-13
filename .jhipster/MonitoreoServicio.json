@@ -1,0 +1,37 @@
+{
+    "name": "MonitoreoServicio",
+    "fields": [
+        {
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "costoTotal",
+            "fieldType": "Float"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "servicio",
+            "otherEntityName": "servicio",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "paramentroMonitoreo",
+            "otherEntityName": "paramentroMonitoreo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071406",
+    "entityTableName": "monitoreo_servicio",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

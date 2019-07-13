@@ -1,0 +1,92 @@
+{
+    "name": "Servicio",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaEntrega",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "nombreSolicitante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroSolicitante",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "observacion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "EstadoServicio",
+            "fieldValues": "REGISTRADO,COTIZADO,APROBADO,NOAPROBADO"
+        },
+        {
+            "fieldName": "codigoCliente",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codigoSede",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "monitoreoServicio",
+            "otherEntityRelationshipName": "servicio",
+            "relationshipName": "monitoreoServicio"
+        },
+        {
+            "relationshipName": "tipoServicios",
+            "otherEntityName": "tipoServicios",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tipoSolicitud",
+            "otherEntityName": "tipoSolicitud",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tipoInduccion",
+            "otherEntityName": "tipoInduccion",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "requisitosSeguridad",
+            "otherEntityName": "requisitosSeguridad",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "sede",
+            "otherEntityName": "sede",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071405",
+    "entityTableName": "servicio",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "comercial",
+    "applications": "*",
+    "microserviceName": "comercial"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Servicio.
+    -->
+    <changeSet id="20190713071405-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tipo_servicios_id"
+                                 baseTableName="servicio"
+                                 constraintName="fk_servicio_tipo_servicios_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_servicios"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_solicitud_id"
+                                 baseTableName="servicio"
+                                 constraintName="fk_servicio_tipo_solicitud_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_solicitud"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_induccion_id"
+                                 baseTableName="servicio"
+                                 constraintName="fk_servicio_tipo_induccion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_induccion"/>
+
+        <addForeignKeyConstraint baseColumnNames="requisitos_seguridad_id"
+                                 baseTableName="servicio"
+                                 constraintName="fk_servicio_requisitos_seguridad_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="requisitos_seguridad"/>
+
+        <addForeignKeyConstraint baseColumnNames="sede_id"
+                                 baseTableName="servicio"
+                                 constraintName="fk_servicio_sede_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sede"/>
+
+    </changeSet>
+</databaseChangeLog>
